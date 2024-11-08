@@ -568,3 +568,71 @@ img {
         font-size: 13px;
     }
 }
+
+/* 헤더 컨테이너 */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 네비게이션 메뉴 */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px; /* 메뉴 간격 */
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #4CAF50;
+}
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* 더 작은 화면 */
+@media (max-width: 480px) {
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
